@@ -1,12 +1,7 @@
 # Be sure to restart your server when you modify this file.
 
-# Your secret key is used for verifying the integrity of signed cookies.
+# Your secret key for verifying the integrity of signed cookies.
 # If you change this key, all old signed cookies will become invalid!
-
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-# You can use `rake secret` to generate a secure secret key.
-
-# Make sure your secret_key_base is kept private
-# if you're sharing your code publicly.
-CakeFundraising::Application.config.secret_key_base = '33ebafe7b7921632e3d55efd6b7e4c7a86b9bd39137f9e54394394ee2387020af7ccc77a5d2c5d65c94072d930790dd5e144882b082bc88d0fe05b03d6909fd3'
+CakeFundraising::Application.config.secret_token = '234a87f344c740f42033637801b3bb5dfb3352be479a768dc499153655891e09fe277a65e50b370d61155bd7dc75ce0cbfe1ddb53f3721bbf27aa921dc2a1746'
