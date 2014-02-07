@@ -13,6 +13,7 @@ gem 'slim-rails'
 gem 'therubyracer', :platform=>:ruby
 gem 'thin'
 gem 'impressionist'
+gem 'inherited_resources'
 
 group :development do
   gem 'better_errors'
@@ -22,6 +23,8 @@ group :development do
   gem 'rails_layout'
 end
 group :development, :test do
+  gem 'pry'
+  gem 'rails-pry'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
 end
