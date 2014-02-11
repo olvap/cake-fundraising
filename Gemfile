@@ -36,7 +36,11 @@ group :test do
   gem 'email_spec'
   gem 'launchy'
 end
-gem 'mysql2'
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'inherited_resources'
