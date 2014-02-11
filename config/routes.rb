@@ -14,5 +14,9 @@ CakeFundraising::Application.routes.draw do
 
   namespace :sponsor do
     resources :pledges
+
+    resources :campaigns do
+      resources :pledges
+    end
   end
 end
