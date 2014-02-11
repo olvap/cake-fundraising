@@ -1,5 +1,5 @@
 h2 Create Your Pledge
-= simple_form_for [:sponsor, @pledge], defaults: { input_html: { class: 'form-control' } } do |f|
+= simple_form_for [:sponsor, @campaign, @pledge], defaults: { input_html: { class: 'form-control' } } do |f|
   ul#myTab.nav.nav-tabs
     li.active
       a href="#pledge" data-toggle="tab" Pledge
