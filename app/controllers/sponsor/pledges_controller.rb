@@ -1,4 +1,4 @@
-class Sponsor::PledgesController < InheritedResources::Base
+class Sponsor::PledgesController < Sponsor::ApplicationController
 
   def permitted_params
     params.permit(pledge: [:headline, :donate, :donate_kind_id, :not_to_exceed, :redirect_click, :per_uniq_clicl_on])
