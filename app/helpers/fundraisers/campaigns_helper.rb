@@ -1,0 +1,2 @@
+module Fundraisers::CampaignsHelper
+end

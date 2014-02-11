@@ -13,4 +13,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require_tree .
+//= require moment
+//= require datepicker
+//= require confirmation
+//= require get_shared_data
+//= require redirect_on_load
+//= require share_this
+//= require update_stats
+//= require wysihtml5-0.3.0
+//= require bootstrap3-wysihtml5
+
+//= require initializer/datepicker
+//= require initializer/wysiwyg

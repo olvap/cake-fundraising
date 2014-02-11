@@ -9,6 +9,8 @@ nav.navbar.navbar-inverse.navbar-fixed-top
         span.icon-bar
       = link_to 'Home', root_path, class: 'navbar-brand'
       = link_to 'Stats', stats_path, class: 'navbar-brand'
+      = link_to 'Create Campaign', new_fundraisers_campaign_path, class: 'navbar-brand'
+      = link_to 'Create Pledge', new_sponsor_pledge_path, class: 'navbar-brand'
     .collapse.navbar-collapse
       ul.nav.navbar-nav
         == render 'layouts/navigation_links'

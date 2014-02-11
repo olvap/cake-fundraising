@@ -1,0 +1,61 @@
+h2 Create Your Pledge
+= simple_form_for [:sponsor, @pledge], defaults: { input_html: { class: 'form-control' } } do |f|
+  ul#myTab.nav.nav-tabs
+    li.active
+      a href="#pledge" data-toggle="tab" Pledge
+    li
+      a href="#story" data-toggle="tab" Tell Your Story
+    li
+      a href="#your_look" data-toggle="tab" Design Your Look
+    li
+      a href="#donations" data-toggle="tab" Add a Coupon
+    li
+      a href="#previen_and_edit" data-toggle="tab" Add a Sweepstake
+    li
+      a href="#solicit_sponsors" data-toggle="tab" Pledge Preview
+    li
+      a href="#solicit_sponsors" data-toggle="tab" Launch Your Pledge
+
+  .tab-content
+    .tab-pane#story
+      .col-md-7
+        .form-group
+          = f.input :headline, placeholder: 'Mission Statement - 40 characters', label: 'Campaign Headline'
+          p.help-block Campaign Launch and End Date (you can change later)
+          .well style="height:75px;"
+            .col-md-5
+              .form-group
+                #datetimepicker_start.datetimepicker.input-group.date
+                  input.form-control type="text"
+                  span.input-group-addon
+                    span.glyphicon.glyphicon-calendar
+            .col-md-5
+              .form-group
+                #datetimepicker_end.datetimepicker.input-group.date
+                  input.form-control type="text"
+                  span.input-group-addon
+                    span.glyphicon.glyphicon-calendar
+          = f.input :story, label: 'Tell Your Story', :input_html => { :rows => 10 }
+      .col-md-5
+        .col-md-7
+          = image_tag asset_path('ruby.png')
+          a.btn.btn-info.center-block Upload Your Logo
+        .col-md-5
+          .well.small.text-info
+            | FR must be able to crop and reposition the image within a fixed frame as desired. 
+            | Must be able to delete and replace the image. When the image uploads and appears here, it should also appear under the preview tab
+    .tab-pane#your_look
+    .tab-pane#pledge.active
+      .col-md-6
+        = f.input :donate, label: 'I agree to donate'
+      .col-md-6
+        = f.association :donate_kind, label: 'In'
+      = f.input :per_uniq_clicl_on, label: 'per unique click to'
+      = f.input :not_to_exceed, label: 'up to an amount not to exceed $'
+      = f.input :redirect_click, label: 'Please Direct Clicks to:'
+
+    .tab-pane#donations
+    .tab-pane#previen_and_edit
+    .tab-pane#solicit_sponsors
+  .action_buttons.pull-right
+    = f.button :submit, class: 'btn-primary'
