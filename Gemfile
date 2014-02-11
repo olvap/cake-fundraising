@@ -43,6 +43,5 @@ group :production do
 end
 gem 'devise'
 gem 'omniauth-facebook'
-gem 'inherited_resources'
 gem "binding_of_caller"
 gem 'simple_form'
