@@ -23,5 +23,5 @@
 //= require wysihtml5-0.3.0
 //= require bootstrap3-wysihtml5
 
-//= require initializer/datepicker
-//= require initializer/wysiwyg
+//= require initializer_datepicker
+//= require initializer_wysiwyg
